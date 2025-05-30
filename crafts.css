@@ -1,0 +1,140 @@
+ .main-header {
+    background-color: #fff; 
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+}
+ .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 30px; 
+}
+ .logo {
+    font-size: 1.8em; 
+    margin: 0;
+    font-weight: 800; 
+    letter-spacing: 1px;
+}
+.logo a {
+    color: #333;     text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+.nav-links a {
+    color: #555;    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 0;
+    transition: all 0.3s ease; 
+    position: relative; 
+}
+.nav-links a::after { 
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #333; 
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdnwordpresstest-f0ekdgevcngegudb.z01.azurefd.net/es/wp-content/uploads/2023/05/Panoramica-Mural-Constelaciones-2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.crafts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+.craft-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.craft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.craft-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.craft-info {
+    padding: 1.5rem;
+}
+.craft-info h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.artisan {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+.description {
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.price {
+    font-weight: bold;
+    color: #ffea00;
+    font-size: 1.1rem;
+}
+.craft-card:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.craft-card:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+    .craft-card:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+.craft-card:focus-within {
+    outline: 2px solid #e67e22;
+    outline-offset: 2px;
+}
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px; 
+}
