@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+}
+
+.hero-section.hero-urbanfest-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    gap: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .hero-section.hero-urbanfest-style {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px 80px;
+    }
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.main-title {
+    font-size: 5.5em;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.description-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn.register-btn {
+    background-color: #ffd766;
+    color: #333;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn.register-btn:hover {
+    background-color: #e5c35c;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 450px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.hero-section.hero-urbanfest-style::before,
+.hero-section.hero-urbanfest-style::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-section.hero-urbanfest-style::before {
+    width: 300px;
+    height: 300px;
+    background-color: #1a73e8;
+    bottom: -150px;
+    left: -150px;
+    filter: blur(80px);
+    opacity: 0.2;
+}
+
+.hero-section.hero-urbanfest-style::after {
+    width: 250px;
+    height: 250px;
+    background-color: #eb453e;
+    top: -120px;
+    right: -120px;
+    filter: blur(70px);
+    opacity: 0.2;
+}
+
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+.creators-info {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.creators-info summary {
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.creators-info summary:hover {
+    background-color: #555;
+}
+
+.creators-info p {
+    margin-top: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.6em;
+    }
+
+    .main-title {
+        font-size: 3.5em;
+        text-align: center;
+    }
+
+    .description-text {
+        text-align: center;
+    }
+
+    .btn.register-btn {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .hero-section.hero-urbanfest-style {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .hero-section.hero-urbanfest-style::before,
+    .hero-section.hero-urbanfest-style::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+        font-size: 0.9em;
+    }
+
+    .main-title {
+        font-size: 2.8em;
+    }
+
+    .description-text {
+        font-size: 0.95em;
+    }
+}
